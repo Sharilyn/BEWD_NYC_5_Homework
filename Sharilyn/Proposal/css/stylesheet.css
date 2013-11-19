@@ -1,56 +1,55 @@
 header {
-  text-align: center;
-  background: url("../office_wideangle_blue.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 350px;
-  overflow: hidden;
+    background: url("../office_wideangle_blue.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 250px;
 }
 
 #logotype {
-	font-family: 'Bigshot One', cursive;
-	color: #b14e18;
-	position: absolute;
-	left: 175px;
-	margin-top: 100px;
-	font-size: 65px;
-	/* width: 250px; */
-	padding: 35px;
-	border: 7px solid white;
-	background: black;
-	border-radius: 100px;
+    font-family: 'Bigshot One', cursive;
+    font-size: 65px;
+    color: #bf4c1b;
+    background: black;
+    border: 7px solid white;
+    border-radius: 100px;
+    position: absolute;
+    left: 100px;
+    margin-top: 75px;
+    padding: 25px;
 }
 
 body {
-	font-family: Verdana;
-}
-
-h1 {
-	font-size: 45px;
-	text-align: center;
-	font-family: 'Bigshot One', cursive;
-	color: #b14e18;
-}
-
-h2 {
-	font-size: 24px;
-	text-align: center;
-	color: #1b6d6d;
-	font-family: 'Oldenburg', cursive;
+    font-family: Verdana;
 }
 
 ul {
-      margin: 0 auto;
-      padding: 20px;
-      max-width: 500px;
-    }
+    max-width: 500px;
+    margin: 0 auto;
+}
 
-@media (max-width: 500px) {
-   h1 {
-        font-size: 36px;
-      }
-   li {
-        display: block;
-        padding: 5px;
-      }
-    }
+li {
+    padding: 2px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Bigshot One', cursive;
+    font-size: 36px;
+    color: #bf4c1b;
+}
+
+h2 {
+    font-family: 'Oldenburg', cursive;
+    font-size: 20px;
+    color: #1f94ab;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0e839a;
+}
+
