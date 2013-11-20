@@ -1,4 +1,8 @@
 <h1>Welcome to RetFlix!</h1>
 <p>See our collection of movies below.</p>
 
-<% render @movies %>
+<% @movies.each do |movie| %>
+    
+    <p><%= movie.title %> </p>
+
+<% end %>
