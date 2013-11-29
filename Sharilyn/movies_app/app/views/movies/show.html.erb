@@ -1,0 +1,9 @@
+<h1><%= @movie.title %></h1>
+<p><%= @movie.year_released %></p>
+<p> Synopsis: <%= @movie.description %></p>
+<p> Rating: <%= @movie.rating %></p>
+
+<p><%= link_to "Edit This Movie", edit_movie_path(@movie) %></p>
+<p>
+<%= link_to "Movies Home", root_path %>
+</p>
