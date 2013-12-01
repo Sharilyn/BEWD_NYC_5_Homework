@@ -1,12 +1,16 @@
 class UrlsController < ApplicationController
   def redirectors
+    url = Url.find_by hash_code params[:code]
+    redirect_to "http://#{url.link}"
   end
 
   def preview
+    @url = Url.find_by hash_code params[:code]
+    render :show
   end
 
   def create
-    @url = Url.create link: params[:url], hash_code: rand(10000)
+    @url = Url.create link: params[:url], hash_code: SecureRandom.urlsafe_base64(8)
     redirect_to @url
   end
 
