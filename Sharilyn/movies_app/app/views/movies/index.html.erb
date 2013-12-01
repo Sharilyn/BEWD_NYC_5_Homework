@@ -22,8 +22,7 @@
 <% @movies.each do |movie| %>
     <tr>
     <td>
-    <strong><%= movie.title %></strong>
-    <%= link_to "Show", movie %>
+    <strong><%= link_to movie.title, movie %></strong>
     </td>
     <td><%= movie.description %> </td>
     <td><%= movie.rating %> </td>
