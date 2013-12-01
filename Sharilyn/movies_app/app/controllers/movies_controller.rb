@@ -12,7 +12,11 @@ class MoviesController < ApplicationController
 
   def create
     movie = Movie.create safe_movie
-    redirect_to movie
+    if movie.valid?
+      redirect_to movie
+    else
+      render :error
+    end
   end
 
   def edit
@@ -21,7 +25,6 @@ class MoviesController < ApplicationController
   def update
     @movie.update safe_movie
     redirect_to @movie
-
   end
 
   def show
