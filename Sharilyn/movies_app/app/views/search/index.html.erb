@@ -1,23 +1,9 @@
 <h1>Movie Search Results</h1>
 <p>Movies which match your search terms</p>
 
-<table cellpadding=4px >
-  <tr>
-    <th bgcolor="#99aaff"><i>Title</i></th>
-    <th bgcolor="#aaccff"><i>Description</i></th>
-    <th bgcolor="#99aacc"><i>Rating </i></th>
-  </tr>
 
-<% @movies.each do |movie| %>
-    <tr>
-    <td><strong><%= link_to movie.title, movie %></strong></td>
-    <td><%= movie.description %> </td>
-    <td><%= movie.rating %> </td>
-    </tr>
+<%= render 'layouts/listing' %>
 
-<% end %>
-
-</table>
 <p>
 <%= link_to "Movies Home", root_path %>
 </p>
