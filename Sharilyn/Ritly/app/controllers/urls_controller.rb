@@ -1,11 +1,11 @@
 class UrlsController < ApplicationController
   def redirectors
-    url = Url.find_by hash_code params[:code]
+    url =  Url.find_by hash_code: params[:code]
     redirect_to "http://#{url.link}"
   end
 
   def preview
-    @url = Url.find_by hash_code params[:code]
+    @url = Url.find_by hash_code: params[:code]
     render :show
   end
 
