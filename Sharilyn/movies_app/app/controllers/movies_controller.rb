@@ -4,6 +4,7 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all
+    # @movies = Movie.search_for(params[:q]) -- this is the method in Steven's app
   end
 
   def new
@@ -11,10 +12,10 @@ class MoviesController < ApplicationController
   end
 
   def create
-    movie = Movie.create safe_movie
-    if movie.save
+    @movie = Movie.create safe_movie
+    if @movie.save
       flash[:notice] = "Movie saved successfully"
-      redirect_to movie
+      redirect_to @movie
     else
       render 'new'
     end
@@ -29,7 +30,6 @@ class MoviesController < ApplicationController
   end
 
   def show
-#    @movie = Movie.find_by_id(:id)
   end
 
   private
