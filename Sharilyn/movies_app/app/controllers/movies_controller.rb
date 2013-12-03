@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-
+  before_action :authenticate_user!, only: [:new, :create]
   before_action :find_movie, only: [:edit, :update, :show]
 
   def index
@@ -12,10 +12,11 @@ class MoviesController < ApplicationController
 
   def create
     movie = Movie.create safe_movie
-    if movie.valid?
+    if movie.save
+      flash[:notice] = "Movie saved successfully"
       redirect_to movie
     else
-      render :error
+      render 'new'
     end
   end
 
