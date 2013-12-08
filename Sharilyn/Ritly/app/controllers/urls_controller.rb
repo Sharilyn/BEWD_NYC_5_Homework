@@ -1,6 +1,9 @@
 class UrlsController < ApplicationController
+before_action :authenticate_user!, only:[:create]
+
   def redirectors
     url =  Url.find_by hash_code: params[:code]
+    # God awful. Will be put in a model with validations added!
     redirect_to "http://#{url.link}"
   end
 
@@ -17,5 +20,4 @@ class UrlsController < ApplicationController
   def show
     @url = Url.find params[:id]
   end
-
 end
